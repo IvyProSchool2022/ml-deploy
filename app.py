@@ -21,7 +21,7 @@ def predict():
     # scaled_input=scaler.fit(user_input)
     prediction=model.predict(user_input)
 
-    return render_template("home.html",prediction_text="Predicted Sales is $ {}".format(prediction[0]))
+    return render_template("home.html",prediction_text="Predicted Sales is $ {:.0f}".format(prediction[0]))
 
 if __name__== '__main__':
     app.run(debug=True)

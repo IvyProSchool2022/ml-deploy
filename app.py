@@ -18,7 +18,7 @@ def predict():
     feature5=float(request.form['feature5'])
 
     user_input=np.array([[feature1,feature2,feature3,feature4,feature5]])
-    # scaled_input=scaler.fit(user_input)
+    # scaled_input=scaler.transform(user_input)
     prediction=model.predict(user_input)
 
     return render_template("home.html",prediction_text="Predicted Sales is $ {:.0f}".format(prediction[0]))

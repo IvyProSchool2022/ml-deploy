@@ -7,8 +7,8 @@ warnings.filterwarnings("ignore")
 app = Flask(__name__)
 
 # Load the saved model and scaler
-model = pickle.load(open(r"F:\Dployment\cost_deployment\model.pkl", 'rb'))
-scaler = pickle.load(open(r"F:\Dployment\cost_deployment\scaler.pkl", 'rb'))
+model = pickle.load(open("model.pkl", 'rb'))
+scaler = pickle.load(open("scaler.pkl", 'rb'))
 
 @app.route('/')
 def home():
